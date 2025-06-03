@@ -519,6 +519,7 @@ footer h5 {
     100% { background-position: -200% 0; }
 }
 
+/* Update */
 .text-muted {
     color: #ffffff !important; /* biru bootstrap, ganti sesuai warna yang kamu mau */
 }
@@ -527,4 +528,7 @@ footer h5 {
     color: #000000 !important; /* biru bootstrap, ganti sesuai warna yang kamu mau */
 }
 
+.lead-text-muted mb-4 {
+    color: #000000 !important; /* biru bootstrap, ganti sesuai warna yang kamu mau */
+}
 
