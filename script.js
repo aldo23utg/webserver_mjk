@@ -13,15 +13,15 @@ const teamMembers = [
         email: "aldo.untag23@gmail.com",
         phone: "+62 812-4990-1668",
         alamat: "Surabaya, Jawa Timur",
-        hobi: "Programming, Gaming, Fotografi",
-        keahlian: "Web Development, Mobile App Development",
-        photo: "assets/fotodiri.jpeg", // Ganti dengan nama file foto sebenarnya
+        hobi: "Programming",
+        keahlian: "Web Development & Network",
+        photo: "assets/fotodiri1.jpg", // Ganti dengan nama file foto sebenarnya
         socialMedia: {
-            instagram: "https://instagram.com/ahmadrizki",
-            linkedin: "https://linkedin.com/in/ahmadrizki",
-            github: "https://github.com/ahmadrizki",
+            instagram: "https://www.instagram.com/",
+            linkedin: "https://www.linkedin.com/",
+            github: "https://github.com/",
         },
-        bio: "Mahasiswa Teknik Informatika yang passionate dalam web development dan mobile app development. Aktif dalam berbagai kompetisi programming dan project open source."
+        bio: "Mahasiswa Teknik Informatika yang passionate dalam web development dan Jaringan."
     },
     {
         id: 2,
@@ -29,18 +29,18 @@ const teamMembers = [
         nim: "1462300178",
         jurusan: "Teknik Informatika",
         angkatan: "2023",
-        email: "sari.indah@untag-sby.ac.id",
-        phone: "+62 813-9876-5432",
+        email: "ristyod@gmail.com",
+        phone: "+62 878-5494-7431",
         alamat: "Sidoarjo, Jawa Timur",
-        hobi: "UI/UX Design, Reading, Traveling",
-        keahlian: "UI/UX Design, Data Analysis",
-        photo: "fotodiri2.jpg", // Ganti dengan nama file foto sebenarnya
+        hobi: "Programming",
+        keahlian: "Web Development & Network",
+        photo: "assets/fotodiri3.jpg", // Ganti dengan nama file foto sebenarnya
         socialMedia: {
-            instagram: "https://instagram.com/sariindah",
-            linkedin: "https://linkedin.com/in/sariindah",
-            github: "https://github.com/ahmadrizki",
+            instagram: "https://www.instagram.com/",
+            linkedin: "https://www.linkedin.com/",
+            github: "https://github.com/",
         },
-        bio: "Mahasiswa Sistem Informasi yang fokus pada UI/UX Design dan Data Analysis. Memiliki pengalaman dalam mendesain berbagai aplikasi mobile dan web."
+        bio: "Mahasiswa Teknik Informatika yang passionate dalam web development dan Jaringan."
     },
     {
         id: 3,
@@ -48,37 +48,37 @@ const teamMembers = [
         nim: "1462300186",
         jurusan: "Teknik Informatika",
         angkatan: "2023",
-        email: "budi.santoso@untag-sby.ac.id",
-        phone: "+62 814-4567-8901",
-        alamat: "Gresik, Jawa Timur",
-        hobi: "Cybersecurity, Music, Sports",
-        keahlian: "Network Security, Database Management",
-        photo: "fotodiri3.jpg", // Ganti dengan nama file foto sebenarnya
+        email: "jrjohn417@gmail.com",
+        phone: "+62 895-2289-9777",
+        alamat: "Surabaya, Jawa Timur",
+        hobi: "Programming",
+        keahlian: "Web Development & Network",
+        photo: "assets/fotodiri2.jpg", // Ganti dengan nama file foto sebenarnya
         socialMedia: {
-            instagram: "https://instagram.com/budisantoso",
-            linkedin: "https://linkedin.com/in/budisantoso",
-            github: "https://github.com/budisantoso",
+            instagram: "https://www.instagram.com/",
+            linkedin: "https://www.linkedin.com/",
+            github: "https://github.com/",
         },
-        bio: "Senior mahasiswa Teknik Informatika yang specialized dalam Network Security dan Database Management. Aktif sebagai asisten dosen dan mentor junior."
+        bio: "Mahasiswa Teknik Informatika yang passionate dalam web development dan Jaringan."
     },
     {
         id: 4,
         name: "Muhammad Anton Bahrul",
-        nim: "1462300184",
+        nim: "1462300011",
         jurusan: "Teknik Informatika",
         angkatan: "2023",
-        email: "maya.sari@untag-sby.ac.id",
+        email: "antonbahrul225@gmail.com",
         phone: "+62 815-7891-2345",
         alamat: "Surabaya, Jawa Timur",
-        hobi: "IoT Development, Dancing, Cooking",
-        keahlian: "Hardware Programming, IoT Systems",
-        photo: "fotodiri4.jpg", // Ganti dengan nama file foto sebenarnya
+        hobi: "Programming",
+        keahlian: "Web Development & Network",
+        photo: "assets/fotodiri4.jpg", // Ganti dengan nama file foto sebenarnya
         socialMedia: {
-            instagram: "https://instagram.com/mayasari",
-            linkedin: "https://linkedin.com/in/mayasari",
-            github: "https://github.com/mayasari",
+            instagram: "https://www.instagram.com/",
+            linkedin: "https://www.linkedin.com/",
+            github: "https://github.com/",
         },
-        bio: "Mahasiswa Teknik Komputer yang antusias dengan IoT Development dan Hardware Programming. Suka mengeksplorasi teknologi terbaru dalam embedded systems."
+        bio: "Mahasiswa Teknik Informatika yang passionate dalam web development dan Jaringan."
     }
 ];
 
