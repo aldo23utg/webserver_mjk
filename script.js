@@ -31,7 +31,7 @@ const teamMembers = [
         angkatan: "2023",
         email: "ristyod@gmail.com",
         phone: "+62 878-5494-7431",
-        alamat: "Sidoarjo, Jawa Timur",
+        alamat: "Surabaya, Jawa Timur",
         hobi: "Programming",
         keahlian: "Web Development & Network",
         photo: "assets/fotodiri3.jpg", // Ganti dengan nama file foto sebenarnya
