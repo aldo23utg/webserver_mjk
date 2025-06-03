@@ -1,0 +1,530 @@
+/* ==========================================
+   CUSTOM CSS UNTUK PORTFOLIO WEBSITE
+   ========================================== */
+
+/* Root Variables untuk konsistensi warna */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Reset dan Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Warna abu-abu terang untuk track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888; /* Warna thumb scrollbar: abu-abu */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666666; /* Warna saat hover: abu-abu lebih gelap */
+}
+
+/* ==========================================
+   NAVIGATION STYLING
+   ========================================== */
+.navbar {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+}
+
+/* Underline effect pada nav links */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   HERO SECTION STYLING
+   ========================================== */
+.hero-section {
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; /* Offset untuk fixed navbar */
+}
+
+/* Animated background pattern */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icon {
+    font-size: 15rem;
+    color: rgba(255,255,255,0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation untuk icon */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   TEAM SECTION STYLING
+   ========================================== */
+.team-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: none;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Profile image container dengan aspect ratio konsisten */
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary-color);
+    position: relative;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    object-position: center; /* Memusatkan gambar */
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .profile-img {
+    transform: scale(1.1);
+}
+
+/* Card content styling */
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.member-name {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.member-nim {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.member-info {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Social media links styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Warna khusus untuk setiap platform social media */
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.social-link.linkedin {
+    background: #0077b5;
+}
+
+.social-link.github {
+    background: #333;
+}
+
+.social-link.twitter {
+    background: #1da1f2;
+}
+
+.social-link.email {
+    background: #ea4335;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Detail button styling */
+.btn-detail {
+    background: var(--gradient-bg);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+/* ==========================================
+   MODAL STYLING
+   ========================================== */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: var(--gradient-bg) !important;
+    border-bottom: none;
+    padding: 1.5rem 2rem;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 6px solid var(--primary-color);
+    margin-bottom: 1rem;
+    box-shadow: 0 15px 35px rgba(13, 110, 253, 0.3);
+}
+
+.modal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-item {
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   ABOUT SECTION STYLING
+   ========================================== */
+.feature-box {
+    text-align: center;
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-box h5 {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   FOOTER STYLING
+   ========================================== */
+footer {
+    background: var(--primary-color) !important;
+}
+
+footer h5 {
+    color: var(--light-color);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .hero-icon {
+        font-size: 8rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-img-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .modal-profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    .hero-icon {
+        font-size: 6rem;
+        margin-top: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-img-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member-name {
+        font-size: 1.3rem;
+    }
+    
+    .member-nim {
+        font-size: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .modal-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .info-item {
+        padding: 1rem;
+    }
+    
+    .btn-detail {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+.text-gradient {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-custom {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.border-radius-custom {
+    border-radius: 20px;
+}
+
+/* Loading animation untuk gambar */
+.img-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.text-muted {
+    color: #ffffff !important; /* biru bootstrap, ganti sesuai warna yang kamu mau */
+}
+
+.text-muted1 {
+    color: #000000 !important; /* biru bootstrap, ganti sesuai warna yang kamu mau */
+}
+
+
